@@ -21,4 +21,10 @@ class GoRPCTest extends UnitTestCase
         $version = BasicClient::getInstance()->version();
         $this->assertEquals('1.0.0', $version);
     }
+
+    public function testGetUserById()
+    {
+        $user = BasicClient::getInstance()->getUserById(1);
+        dd($user);
+    }
 }
